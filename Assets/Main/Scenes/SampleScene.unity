@@ -2663,10 +2663,13 @@ MonoBehaviour:
   - {fileID: 2908529951354173853, guid: b8c7eb281666fc14faf087c776ebd48e, type: 3}
   m_starterPlatforms:
   - {fileID: 2908529951354173853, guid: d3d945165bf1ed043b5bbcb4515884b2, type: 3}
+  - {fileID: 2908529951354173853, guid: 5f0194bd85b37a5478b4976d9bc24744, type: 3}
+  - {fileID: 2908529951354173853, guid: db2f29b3692e1684e91af372c8f0d103, type: 3}
   m_platforms:
   - {fileID: 2908529951354173853, guid: 8be85e2a4a939bb428ee99adc640b1ae, type: 3}
   - {fileID: 2908529951354173853, guid: 2a973af74ecf8d247a5f366756647a36, type: 3}
   - {fileID: 2908529951354173853, guid: 141512a2d79abcd4d8b8af2b8e4f959e, type: 3}
+  - {fileID: 2908529951354173853, guid: 17edf76e0bb4e8e4fa2ebcbe452682c7, type: 3}
   m_winPlatforms:
   - {fileID: 2908529951354173853, guid: 2b15e4cbfa1fd2140bbef689f1232cfb, type: 3}
 --- !u!1 &1062080224

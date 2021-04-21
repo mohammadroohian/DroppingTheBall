@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -10,9 +11,10 @@ public class ScoreManager : MonoBehaviour
     private static ScoreManager m_instance = null;
     private int m_newScore = 0;
     private int m_bestScore = 0;
-    public TextMeshProUGUI m_newScoreUI = null;
-    public TextMeshProUGUI m_bestScoreUI = null;
-    public string m_bestScoreKey = "bestScore";
+    [SerializeField] private TextMeshProUGUI m_newScoreUI = null;
+    [SerializeField] private TextMeshProUGUI m_bestScoreUI = null;
+    [SerializeField] private string m_bestScoreKey = "bestScore";
+    [SerializeField] private UnityEvent m_onScoreChanged = null;
 
 
     // property________________________________________________________________
@@ -23,7 +25,12 @@ public class ScoreManager : MonoBehaviour
         set
         {
             m_newScore = value;
-            m_newScoreUI.text = m_newScore.ToString();
+
+            // UI
+            NewScoreUI.text = m_newScore.ToString();
+
+            // event
+            m_onScoreChanged.Invoke();
         }
     }
     public int BestScore
@@ -32,9 +39,13 @@ public class ScoreManager : MonoBehaviour
         private set
         {
             m_bestScore = value;
-            m_bestScoreUI.text = "Best Score: " + m_bestScore.ToString();
+            BestScoreUI.text = "Best Score: " + m_bestScore.ToString();
         }
     }
+
+    public TextMeshProUGUI NewScoreUI { get => m_newScoreUI; set => m_newScoreUI = value; }
+    public TextMeshProUGUI BestScoreUI { get => m_bestScoreUI; set => m_bestScoreUI = value; }
+    public string BestScoreKey { get => m_bestScoreKey; set => m_bestScoreKey = value; }
 
 
     // monoBehaviour___________________________________________________________
@@ -57,10 +68,10 @@ public class ScoreManager : MonoBehaviour
     }
     private int GetBestScore()
     {
-        return SaveLoad.LoadInt(m_bestScoreKey, VariableSaveType.Binary);
+        return SaveLoad.LoadInt(BestScoreKey, VariableSaveType.Binary);
     }
     private void SetBestScore(int newScore)
     {
-        SaveLoad.SaveInt(m_bestScoreKey, newScore, VariableSaveType.Binary);
+        SaveLoad.SaveInt(BestScoreKey, newScore, VariableSaveType.Binary);
     }
 }

@@ -2520,6 +2520,20 @@ MonoBehaviour:
   m_newScoreUI: {fileID: 1164812562}
   m_bestScoreUI: {fileID: 1609860739}
   m_bestScoreKey: bestScore
+  m_onScoreChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1164812564}
+        m_MethodName: StartFade
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1040966201
 GameObject:
   m_ObjectHideFlags: 0
@@ -2569,6 +2583,8 @@ MonoBehaviour:
   - {fileID: 2908529951354173853, guid: d3d945165bf1ed043b5bbcb4515884b2, type: 3}
   m_platforms:
   - {fileID: 2908529951354173853, guid: 8be85e2a4a939bb428ee99adc640b1ae, type: 3}
+  - {fileID: 2908529951354173853, guid: 2a973af74ecf8d247a5f366756647a36, type: 3}
+  - {fileID: 2908529951354173853, guid: 141512a2d79abcd4d8b8af2b8e4f959e, type: 3}
   m_winPlatforms:
   - {fileID: 2908529951354173853, guid: 2b15e4cbfa1fd2140bbef689f1232cfb, type: 3}
 --- !u!1 &1062080224
@@ -2746,6 +2762,7 @@ GameObject:
   - component: {fileID: 1164812561}
   - component: {fileID: 1164812563}
   - component: {fileID: 1164812562}
+  - component: {fileID: 1164812564}
   m_Layer: 5
   m_Name: Text_Score
   m_TagString: Untagged
@@ -2868,6 +2885,99 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164812560}
   m_CullTransparentMesh: 0
+--- !u!114 &1164812564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164812560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 749c908ed2b5d6b4399fd918b38a2634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_isActive: 1
+  m_graphicType: 0
+  m_initializeType: 0
+  m_autoPlayOnStartIndex: 0
+  m_autoPlayOnEnableIndex: 0
+  m_fadeContents:
+  - m_justAlpha: 0
+    m_useItemColorAsFirstColor: 0
+    m_firstColor: {r: 0, g: 0, b: 0, a: 0}
+    m_secondColor: {r: 1, g: 1, b: 1, a: 1}
+    m_fadeCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - m_justAlpha: 1
+    m_useItemColorAsFirstColor: 0
+    m_firstColor: {r: 1, g: 1, b: 1, a: 1}
+    m_secondColor: {r: 0, g: 0, b: 0, a: 0}
+    m_fadeCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_actOnChildren: 0
+  m_includeInactive: 0
+  m_getGraphicItemsAtRunTime: 0
+  m_getGraphicItemsAtUpdate: 0
+  m_onActive:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onDeActive:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1248653641
 GameObject:
   m_ObjectHideFlags: 0

@@ -1249,7 +1249,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 301.98053}
+  m_AnchoredPosition: {x: 0, y: 320}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &466640085
@@ -3069,7 +3069,7 @@ MonoBehaviour:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.2
+        time: 0.1
         value: 1
         inSlope: 0
         outSlope: 0
@@ -3078,7 +3078,7 @@ MonoBehaviour:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
+        time: 0.5
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3115,12 +3115,12 @@ MonoBehaviour:
   m_translateAtStart: 0
   m_baseGameObject: {fileID: 0}
   m_pivot: {fileID: 0}
-  m_speed: 3
+  m_speed: 10
   m_points:
   - {fileID: 301666946}
   - {fileID: 1807037138}
   - {fileID: 437836862}
-  m_threshold: 0.5
+  m_threshold: 1
   m_isLoop: 0
 --- !u!1 &1248653641
 GameObject:
@@ -3941,7 +3941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_isActive: 1
-  m_speed: 2
+  m_speed: 5
   m_smooth: 5
   m_baseGameObject: {fileID: 1754222948}
 --- !u!1 &1609860737

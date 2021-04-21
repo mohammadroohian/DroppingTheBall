@@ -3670,7 +3670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454cfd6aca86d9940b5f75c223691925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_isActive: 1
+  m_isActive: 0
   m_speed: 0.4
   m_smooth: 50
   m_baseGameObject: {fileID: 1754222948}
@@ -3686,7 +3686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bf75b1aed640ed488eb13fb8e44456b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_isActive: 0
+  m_isActive: 1
   m_speed: 2
   m_smooth: 5
   m_baseGameObject: {fileID: 1754222948}

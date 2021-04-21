@@ -16,6 +16,7 @@ public class DeathZoneDetection : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (LevelManager.Instance.GameIsWinOrGameOver) return;
         if (other.gameObject.tag != m_deathZoneTag) return;
 
         // freez ball
@@ -29,5 +30,6 @@ public class DeathZoneDetection : MonoBehaviour
 
         // game over 
         LevelManager.Instance.GameOver();
+        LevelManager.Instance.IsGameOver = true;
     }
 }

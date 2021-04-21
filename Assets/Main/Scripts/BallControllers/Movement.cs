@@ -64,6 +64,7 @@ public class Movement : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (LevelManager.Instance.GameIsWinOrGameOver) return;
         if (other.gameObject.tag != m_groundDetectionTag) return;
 
         if (BasePlatform != other.transform)

@@ -9,10 +9,30 @@ public class LevelManager : MonoBehaviour
     private static LevelManager m_instance = null;
     public UnityEvent m_onGameOver = null;
     public UnityEvent m_onWin = null;
+    private bool m_isGameOver = false;
+    private bool m_isWin = false;
 
 
     // property________________________________________________________________
     public static LevelManager Instance { get { return m_instance; } }
+    public bool GameIsWinOrGameOver { get { return IsGameOver || IsWin; } }
+
+    public bool IsGameOver
+    {
+        get => m_isGameOver; set
+        {
+            m_isGameOver = value;
+            if (m_isGameOver) m_isWin = false;
+        }
+    }
+    public bool IsWin
+    {
+        get => m_isWin; set
+        {
+            m_isWin = value;
+            if (m_isWin) m_isGameOver = false;
+        }
+    }
 
 
     // monoBehaviour___________________________________________________________

@@ -16,6 +16,7 @@ public class WinDetection : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (LevelManager.Instance.GameIsWinOrGameOver) return;
         if (other.gameObject.tag != m_winDetectionTag) return;
 
         // freez ball
@@ -29,5 +30,6 @@ public class WinDetection : MonoBehaviour
 
         // score
         ScoreManager.Instance.SaveNewScore();
+        LevelManager.Instance.IsWin = true;
     }
 }

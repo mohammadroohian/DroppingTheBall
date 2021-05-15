@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
     private bool m_isFreezed = false;
     private InputController[] m_inputSystems;
 
+
     // property________________________________________________________________
     public static InputManager Instance { get { return m_instance; } }
     public bool IsFreezed

@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     // variable________________________________________________________________
+    [Tag]
     public string m_groundDetectionTag = "Platform";
     [SerializeField] private float m_speed = 2f;
     public float m_maxHight = 1f;

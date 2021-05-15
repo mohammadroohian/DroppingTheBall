@@ -5,6 +5,7 @@ using UnityEngine;
 public class Platform : MonoBehaviour
 {
     // variable________________________________________________________________
+    public string m_ballDetectionTag = "Ball";
     private bool m_ballIsOnThisPlatform = false;
     public Transform m_platforms = null;
     public Transform m_deathzpnes = null;
@@ -18,7 +19,7 @@ public class Platform : MonoBehaviour
     // monoBehaviour___________________________________________________________
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Ball")
+        if (other.gameObject.tag == m_ballDetectionTag)
         {
             BallIsOnThisPlatform = true;
         }

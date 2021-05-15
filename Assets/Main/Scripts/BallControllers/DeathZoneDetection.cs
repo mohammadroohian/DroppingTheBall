@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using NaughtyAttributes;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DeathZoneDetection : MonoBehaviour
 {
     // variable________________________________________________________________
+    [Tag]
     public string m_deathZoneTag = "DeathZone";
     private Movement m_movement = null;
 

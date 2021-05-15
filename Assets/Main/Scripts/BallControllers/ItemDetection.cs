@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using NaughtyAttributes;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemDetection : MonoBehaviour
 {
     // variable________________________________________________________________
+    [Tag]
     public string m_itemTag = "Star";
 
 
